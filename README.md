@@ -37,7 +37,14 @@ A bioconductor/bioconductor_docker:[RELEASE_3_19](https://bioconductor.org/news/
 ## Pull the container
 
 ```bash
+# As docker
 docker pull ghcr.io/KarlssonLaboratory/methylkit-env:main
+
+# As apptainer
+apptainer pull docker://ghcr.io/KarlssonLaboratory/methylkit-env:main
+
+# As singularity
+singularity pull docker://ghcr.io/KarlssonLaboratory/methylkit-env:main
 ```
 
 ## Run interactively
