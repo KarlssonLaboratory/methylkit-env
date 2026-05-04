@@ -2,7 +2,7 @@ FROM bioconductor/bioconductor_docker:RELEASE_3_19
 
 ARG QUARTO_VERSION=1.8.27
 
-# install Quarto, Git, qpdf
+# Install Quarto, Git, qpdf
 RUN wget -q https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO_VERSION}/quarto-${QUARTO_VERSION}-linux-amd64.deb \
   && apt-get update \
   && apt-get install -y --no-install-recommends \
@@ -13,35 +13,9 @@ RUN wget -q https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN R -e "install.packages(c( \
-  'tidyverse', \
-  'gt', \
-  'DT', \
-  'gtools', \
-  'scales', \
-  'data.table', \
-  'ggrepel', \
-  'ggvenn', \
-  'RColorBrewer', \
-  'cowplot', \
-  'ggsignif', \
-  'openxlsx', \
-  'patchwork' \
-), repos = 'https://cloud.r-project.org')"
-
-RUN R -e "BiocManager::install(c( \
-  'methylKit', \
-  'genomation', \
-  'GenomicRanges', \
-  'clusterProfiler', \
-  'tximport', \
-  'biomaRt', \
-  'ComplexHeatmap', \
-  'BSgenome.Hsapiens.UCSC.hg38', \
-  'BSgenome.Mmusculus.UCSC.mm39', \
-  'org.Mm.eg.db', \
-  'org.Hs.eg.db' \
-), ask = FALSE, update = FALSE)"
+# Install R-packages
+COPY install.R /tmp/install.R
+RUN Rscript /tmp/install.R
 
 WORKDIR /data
 CMD ["/bin/bash"]

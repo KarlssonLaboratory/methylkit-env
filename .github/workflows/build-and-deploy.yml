@@ -64,8 +64,9 @@ jobs:
             library(BSgenome.Hsapiens.UCSC.hg38)
             library(methylKit)
             library(data.table)
-            cat('Test packages loaded successfully\n')
+            cat("data.table version:", as.character(packageVersion("data.table")), "\n")
             cat('methylKit version:', as.character(packageVersion('methylKit')), '\n')
+            cat('Test packages loaded successfully\n')
           "
 
       # Only push if test passed
