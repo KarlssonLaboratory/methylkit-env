@@ -1,0 +1,5 @@
+data/
+*.bam
+*.fastq.gz
+.git/
+results/
