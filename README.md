@@ -57,18 +57,18 @@ docker build -t variant_call .
 <details>
   <summary>As nextflow process</summary>
 
-  ```groovy
+	```groovy
 	process PROCESS_NAME {
 		
 		. . .
 
 		container "${workflow.containerEngine == 'singularity' ?
-	  	'docker://ghcr.io/karlssonlaboratory/methylkit-env:main' :
-	  	'ghcr.io/karlssonlaboratory/methylkit-env:main'}"
+  		'docker://ghcr.io/karlssonlaboratory/methylkit-env:main' :
+  		'ghcr.io/karlssonlaboratory/methylkit-env:main'}"
 
-	  . . .
+  	. . .
 	}
 	```
-
+<br>
 	The container definition uses an [elvis operator](https://www.nextflow.io/docs/latest/reference/syntax.html#unary-expressions) = `<statement> ? <TRUE> : <FALSE>`
 </details>
