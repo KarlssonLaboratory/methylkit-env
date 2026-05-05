@@ -7,6 +7,7 @@ RUN wget -q https://github.com/quarto-dev/quarto-cli/releases/download/v${QUARTO
   && apt-get update \
   && apt-get install -y --no-install-recommends \
     ./quarto-${QUARTO_VERSION}-linux-amd64.deb \
+    less \
     git \
     qpdf \
   && rm quarto-${QUARTO_VERSION}-linux-amd64.deb \
