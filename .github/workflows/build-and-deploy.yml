@@ -6,6 +6,7 @@ on:
     paths:
       - Dockerfile
       - .github/workflows/build-and-deploy.yml
+      - install.R
   pull_request:
     branches: [main]
 
