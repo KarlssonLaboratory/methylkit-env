@@ -21,6 +21,7 @@ A bioconductor/bioconductor_docker:[RELEASE_3_19](https://bioconductor.org/news/
 + ggsignif
 + openxlsx
 + patchwork
++ pheatmap
 + methylKit
 + genomation
 + GenomicRanges

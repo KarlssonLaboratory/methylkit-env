@@ -31,7 +31,8 @@ pkgs_CRAN <- c(
   "cowplot",
   "ggsignif",
   "openxlsx",
-  "patchwork"
+  "patchwork",
+  "pheatmap"
 )
 
 install.packages(
