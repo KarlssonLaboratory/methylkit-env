@@ -55,7 +55,8 @@ pkgs_Bioc <- c(
   "BSgenome.Hsapiens.UCSC.hg38",
   "BSgenome.Mmusculus.UCSC.mm39",
   "org.Mm.eg.db",
-  "org.Hs.eg.db"
+  "org.Hs.eg.db",
+  "annotatr"
 )
 
 BiocManager::install(
