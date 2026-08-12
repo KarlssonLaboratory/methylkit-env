@@ -2,9 +2,6 @@
 
 A Bioconductor [3.19](https://bioconductor.org/news/bioc_3_19_release/) Docker container built on [methylKit](https://github.com/al2na/methylKit) for differential DNA methylation analysis, including R-packages for genomic annotation, pathway enrichment, publication-quality figures and Quarto for generating reports.
 
-> [!NOTE]
-> Every push to `main` automatically builds and pushes the image to GitHub Container Registry. Tagged releases (e.g. `v1.0.0`) produce versioned image tags.
-
 <details>
 	<summary>Included R-packages</summary>
 
@@ -38,6 +35,9 @@ A Bioconductor [3.19](https://bioconductor.org/news/bioc_3_19_release/) Docker c
 	+ openxlsx
 	+ tximport
 </details>
+
+> [!NOTE]
+> Every push to `main` automatically builds and pushes the image to GitHub Container Registry. Tagged releases (e.g. `v1.0.0`) produce versioned image tags.
 
 ## Pull the container
 
