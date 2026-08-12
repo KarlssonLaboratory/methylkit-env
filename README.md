@@ -62,8 +62,8 @@ docker run -it --rm -v $(pwd):/data ghcr.io/karlssonlaboratory/methylkit-env:63c
 
 ```sh
 git clone https://github.com/karlssonlaboratory/methylkit-env:63c37f4.git
-cd variant_call
-docker build -t variant_call .
+cd methylkit-env
+docker build -t methylkit-env .
 ```
 
 <details>
