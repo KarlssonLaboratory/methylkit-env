@@ -84,3 +84,39 @@ process PROCESS_NAME {
 
 The container definition uses an [elvis operator](https://www.nextflow.io/docs/latest/reference/syntax.html#unary-expressions) = `<statement> ? <TRUE> : <FALSE>`
 </details>
+
+## Dockerfile details
+
+`Dockerfile` runs the content inside `install.R`, which holds all R-packages. Edit this file in order to add more packages
+
+```yml
+# Dockerfile
+COPY install.R /tmp/install.R
+RUN Rscript /tmp/install.R
+```
+
+```r
+# install.R
+pkgs_Bioc <- c(
+  "methylKit",
+  "genomation",
+  "GenomicRanges",
+  "clusterProfiler",
+  "tximport",
+  "biomaRt",
+  "ComplexHeatmap",
+  "BSgenome.Hsapiens.UCSC.hg38",
+  "BSgenome.Mmusculus.UCSC.mm39",
+  "org.Mm.eg.db",
+  "org.Hs.eg.db",
+  "TxDb.Mmusculus.UCSC.mm39.knownGene",
+  "ChIPseeker"
+)
+
+BiocManager::install(
+  pkgs_Bioc,
+  ask = FALSE,
+  update = FALSE,
+  Ncpus = parallel::detectCores()
+)
+```
