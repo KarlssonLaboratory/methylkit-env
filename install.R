@@ -56,7 +56,8 @@ pkgs_Bioc <- c(
   "BSgenome.Mmusculus.UCSC.mm39",
   "org.Mm.eg.db",
   "org.Hs.eg.db",
-  "annotatr"
+  "TxDb.Mmusculus.UCSC.mm39.knownGene",
+  "ChIPseeker"
 )
 
 BiocManager::install(
