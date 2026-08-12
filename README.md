@@ -33,31 +33,32 @@ A bioconductor/bioconductor_docker:[RELEASE_3_19](https://bioconductor.org/news/
 + BSgenome.Mmusculus.UCSC.mm39
 + org.Mm.eg.db
 + org.Hs.eg.db
++ [annotatr](https://bioconductor.org/packages//release/bioc/vignettes/annotatr/inst/doc/annotatr-vignette.html), provides genomic regions annotations (exon, intron, promoter, CpG-island etc)
 </details>
 
 ## Pull the container
 
 ```sh
 # As docker
-docker pull ghcr.io/karlssonlaboratory/methylkit-env:6b7f121
+docker pull ghcr.io/karlssonlaboratory/methylkit-env:8d466ae
 
 # As apptainer
-apptainer pull docker://ghcr.io/karlssonlaboratory/methylkit-env:6b7f121
+apptainer pull docker://ghcr.io/karlssonlaboratory/methylkit-env:8d466ae
 
 # As singularity
-singularity pull docker://ghcr.io/karlssonlaboratory/methylkit-env:6b7f121
+singularity pull docker://ghcr.io/karlssonlaboratory/methylkit-env:8d466ae
 ```
 
 ## Run interactively
 
 ```sh
-docker run -it --rm -v $(pwd):/data ghcr.io/karlssonlaboratory/methylkit-env:6b7f121
+docker run -it --rm -v $(pwd):/data ghcr.io/karlssonlaboratory/methylkit-env:8d466ae
 ```
 
 ## Build locally
 
 ```sh
-git clone https://github.com/karlssonlaboratory/methylkit-env:6b7f121.git
+git clone https://github.com/karlssonlaboratory/methylkit-env:8d466ae.git
 cd variant_call
 docker build -t variant_call .
 ```
@@ -71,8 +72,8 @@ process PROCESS_NAME {
 	. . .
 
 	container "${workflow.containerEngine == 'singularity' ?
-		'docker://ghcr.io/karlssonlaboratory/methylkit-env:6b7f121' :
-		'ghcr.io/karlssonlaboratory/methylkit-env:6b7f121'}"
+		'docker://ghcr.io/karlssonlaboratory/methylkit-env:8d466ae' :
+		'ghcr.io/karlssonlaboratory/methylkit-env:8d466ae'}"
 
 	. . .
 }
