@@ -44,25 +44,25 @@ A Bioconductor [3.19](https://bioconductor.org/news/bioc_3_19_release/) Docker c
 
 ```sh
 # As docker
-docker pull ghcr.io/karlssonlaboratory/methylkit-env:63c37f4
+docker pull ghcr.io/karlssonlaboratory/methylkit-env:787bcbd
 
 # As apptainer
-apptainer pull docker://ghcr.io/karlssonlaboratory/methylkit-env:63c37f4
+apptainer pull docker://ghcr.io/karlssonlaboratory/methylkit-env:787bcbd
 
 # As singularity
-singularity pull docker://ghcr.io/karlssonlaboratory/methylkit-env:63c37f4
+singularity pull docker://ghcr.io/karlssonlaboratory/methylkit-env:787bcbd
 ```
 
 ## Run interactively
 
 ```sh
-docker run -it --rm -v $(pwd):/data ghcr.io/karlssonlaboratory/methylkit-env:63c37f4
+docker run -it --rm -v $(pwd):/data ghcr.io/karlssonlaboratory/methylkit-env:787bcbd
 ```
 
 ## Build locally
 
 ```sh
-git clone https://github.com/karlssonlaboratory/methylkit-env:63c37f4.git
+git clone https://github.com/karlssonlaboratory/methylkit-env:787bcbd.git
 cd methylkit-env
 docker build -t methylkit-env .
 ```
@@ -76,8 +76,8 @@ process PROCESS_NAME {
 	. . .
 
 	container "${workflow.containerEngine == 'singularity' ?
-		'docker://ghcr.io/karlssonlaboratory/methylkit-env:63c37f4' :
-		'ghcr.io/karlssonlaboratory/methylkit-env:63c37f4'}"
+		'docker://ghcr.io/karlssonlaboratory/methylkit-env:787bcbd' :
+		'ghcr.io/karlssonlaboratory/methylkit-env:787bcbd'}"
 
 	. . .
 }
