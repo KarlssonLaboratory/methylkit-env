@@ -32,7 +32,8 @@ pkgs_CRAN <- c(
   "ggsignif",
   "openxlsx",
   "patchwork",
-  "pheatmap"
+  "pheatmap",
+  "msigdbr"
 )
 
 install.packages(

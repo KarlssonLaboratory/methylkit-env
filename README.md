@@ -13,6 +13,7 @@ A Bioconductor [3.19](https://bioconductor.org/news/bioc_3_19_release/) Docker c
 	+ GenomicRanges
 	+ [TxDb.Mmusculus.UCSC.mm39.knownGene](https://bioconductor.org/packages//release/data/annotation/html/TxDb.Mmusculus.UCSC.mm39.knownGene.html), provides genomic regions annotations (exon, intron, promoter, CpG-island etc),
 	+ [ChIPseeker](https://github.com/YuLab-SMU/ChIPseeker), finds the nearest gene around a peak/position
+	+ [msigdbr](https://cran.r-project.org/web/packages/msigdbr/index.html), contains genesets (imprinted genes etc)
 + **Pathway enrichment**:
 	+ biomaRt
 	+ clusterProfiler
@@ -110,7 +111,7 @@ pkgs_Bioc <- c(
   "org.Mm.eg.db",
   "org.Hs.eg.db",
   "TxDb.Mmusculus.UCSC.mm39.knownGene",
-  "ChIPseeker"
+  "ChIPseeker",
 )
 
 BiocManager::install(
